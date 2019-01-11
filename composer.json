@@ -1,0 +1,41 @@
+{
+    "name": "vardump/recentchanges",
+    "description": "A Widget showing recent changes to entries.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "recentchanges",
+        "widget"
+    ],
+    "support": {
+        "docs": "https://github.com/vardump-de/recentchanges/blob/master/README.md",
+        "issues": "https://github.com/vardump-de/recentchanges/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "rmdev",
+            "homepage": "https://github.com/rmdev"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "vardump\\recentchanges\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Recentchanges",
+        "handle": "recentchanges",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/vardump-de/recentchanges/master/CHANGELOG.md",
+        "class": "vardump\\recentchanges\\Recentchanges"
+    }
+}
