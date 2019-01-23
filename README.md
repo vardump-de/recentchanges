@@ -1,8 +1,8 @@
 # recentchanges plugin for Craft CMS 3.x
 
-A Widget showing recent changes to entries. (Forked from the original RecentEntries Widget included in [Craft 3](https://github.com/craftcms/cms))
+A Widget showing the last updated Entries. (Forked from the original RecentEntries Widget included in [Craft 3](https://github.com/craftcms/cms))
 
-![Screenshot](resources/img/plugin-logo.png)
+![Screenshot](resources/img/widget-screenshot.png)
  
 
 ## Requirements
@@ -30,4 +30,6 @@ Go to the Dashboard and add a Recent Changes Widget.
 You can choose a section and the number of entries shown. 
 
 
-Brought to you by [vardump](https://vardump.de)
+![Screenshot](resources/img/plugin-logo.png)
+
+Brought to you by [vardump.de](https://vardump.de)
