@@ -226,7 +226,14 @@ class RecentchangesWidget extends Widget
         $query->limit($this->limit ?: 100);
         $query->orderBy('elements.dateUpdated desc');
 
-        return $query->all();
+        $entries = $query->all();
+        $result = array();
+        foreach ($entries as $entry) {
+            $versions = Craft::$app->getEntryRevisions()->getVersionsByEntryId($entry->getId(), $targetSiteId, 1, true);
+            $currentVersion = reset($versions);
+            $result[] = $currentVersion;
+        }
+        return $result;
     }
 
     /**
