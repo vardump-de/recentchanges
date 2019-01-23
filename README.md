@@ -1,9 +1,10 @@
 # recentchanges plugin for Craft CMS 3.x
 
-A Widget showing the last updated Entries. (Forked from the original RecentEntries Widget included in [Craft 3](https://github.com/craftcms/cms))
+A Widget showing the last updated entries. (Forked from the original RecentEntries Widget included in [Craft 3](https://github.com/craftcms/cms))
 
 ![Screenshot](resources/img/widget-screenshot.png)
  
+The username is only shown in `Craft Pro` because you only have one user in `Craft Solo`.
 
 ## Requirements
 
