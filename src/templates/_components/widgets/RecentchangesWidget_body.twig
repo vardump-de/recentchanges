@@ -17,8 +17,10 @@
     {% if entries|length %}
         <table class="data fullwidth">
             {% for entry in entries %}
+                {% set className = className(entry) %}
                 <tr>
                     <td>
+                        <span class="status {{ entry.status }} "></span>
                         <a href="{{ entry.getCpEditUrl() }}">{{ entry.title }}</a>
                         <span class="light">
                             {{ entry.dateUpdated|timestamp('short') }}
