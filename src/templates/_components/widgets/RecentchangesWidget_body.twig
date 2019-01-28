@@ -22,7 +22,13 @@
                         <a href="{{ entry.getCpEditUrl() }}">{{ entry.title }}</a>
                         <span class="light">
                             {{ entry.dateUpdated|timestamp('short') }}
-                            {%- if CraftEdition == CraftPro and entry.getCreator() %},  {{ entry.getCreator().username }} {% endif -%}
+                            {% if CraftEdition == CraftPro %}
+                                {% if className == "craft\\models\\EntryVersion" %}
+                                    , {{ entry.getCreator().username }}
+                                {% elseif className == "craft\\elements\\Entry" %}
+                                    , {{ entry.author.username }}
+                                {% endif %}
+                            {% endif %}
                         </span>
                     </td>
                 </tr>

@@ -231,7 +231,11 @@ class RecentchangesWidget extends Widget
         foreach ($entries as $entry) {
             $versions = Craft::$app->getEntryRevisions()->getVersionsByEntryId($entry->getId(), $targetSiteId, 1, true);
             $currentVersion = reset($versions);
-            $result[] = $currentVersion;
+            if ($currentVersion) {
+                $result[] = $currentVersion;
+            }  else {
+                $result[] = $entry;
+            }
         }
         return $result;
     }
