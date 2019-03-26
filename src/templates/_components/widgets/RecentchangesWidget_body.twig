@@ -24,10 +24,10 @@
                         <a href="{{ entry.getCpEditUrl() }}">{{ entry.title }}</a>
                         <span class="light">
                             {{ entry.dateUpdated|timestamp('short') }}
-                            {% if CraftEdition == CraftPro %}
-                                {% if className == "craft\\models\\EntryVersion" %}
+                            {%- if CraftEdition == CraftPro -%}
+                                {% if className == "craft\\models\\EntryVersion" -%}
                                     , {{ entry.getCreator().username }}
-                                {% elseif className == "craft\\elements\\Entry" %}
+                                {% elseif className == "craft\\elements\\Entry" -%}
                                     , {{ entry.author.username }}
                                 {% endif %}
                             {% endif %}
