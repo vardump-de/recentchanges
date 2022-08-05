@@ -1,11 +1,11 @@
 <?php
 /**
- * recentchanges plugin for Craft CMS 3.x
+ * recentchanges plugin for Craft CMS 4.x
  *
  * A Widget showing recent changes to entries.
  *
  * @link      https://github.com/rmdev
- * @copyright Copyright (c) 2018 rmdev
+ * @copyright Copyright (c) 2018-2022 rmdev
  */
 
 /**

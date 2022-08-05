@@ -1,34 +1,20 @@
 <?php
 /**
- * recentchanges plugin for Craft CMS 3.x
+ * recentchanges plugin for Craft CMS 4.x
  *
  * A Widget showing recent changes to entries.
  *
  * @link      https://github.com/rmdev
- * @copyright Copyright (c) 2018 rmdev
- */
-/**
- * recentchanges plugin for Craft CMS 3.x
- *
- * A Widget showing recent changes to entries.
- *
- * @link      https://github.com/rmdev
- * @copyright Copyright (c) 2018 rmdev
+ * @copyright Copyright (c) 2018-2022 rmdev
  */
 
 namespace vardump\recentchanges;
 
-use vardump\recentchanges\services\RecentchangesService as RecentchangesServiceService;
-use vardump\recentchanges\widgets\RecentchangesWidget as RecentchangesWidgetWidget;
+use vardump\recentchanges\widgets\RecentchangesWidget;
 
 use Craft;
-use craft\base\Plugin;
-use craft\services\Plugins;
-use craft\events\PluginEvent;
-use craft\web\UrlManager;
 use craft\services\Dashboard;
 use craft\events\RegisterComponentTypesEvent;
-use craft\events\RegisterUrlRulesEvent;
 
 use yii\base\Event;
 
@@ -45,10 +31,8 @@ use yii\base\Event;
  * @author    rmdev
  * @package   Recentchanges
  * @since     1.0.0
- *
- * @property  RecentchangesServiceService $recentchangesService
  */
-class Recentchanges extends Plugin
+class Plugin extends craft\base\Plugin
 {
     // Static Properties
     // =========================================================================
@@ -57,9 +41,9 @@ class Recentchanges extends Plugin
      * Static property that is an instance of this plugin class so that it can be accessed via
      * Recentchanges::$plugin
      *
-     * @var Recentchanges
+     * @var Plugin
      */
-    public static $plugin;
+    public static self $plugin;
 
     // Public Properties
     // =========================================================================
@@ -69,7 +53,7 @@ class Recentchanges extends Plugin
      *
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '1.0.0';
 
     // Public Methods
     // =========================================================================
@@ -96,14 +80,10 @@ class Recentchanges extends Plugin
             Dashboard::class,
             Dashboard::EVENT_REGISTER_WIDGET_TYPES,
             function(RegisterComponentTypesEvent $event) {
-                $event->types[] = RecentchangesWidgetWidget::class;
+                $event->types[] = RecentchangesWidget::class;
             }
         );
 
-
-        /**
-         * log it
-         */
         Craft::info(
             Craft::t(
                 'recentchanges',
@@ -113,8 +93,4 @@ class Recentchanges extends Plugin
             __METHOD__
         );
     }
-
-    // Protected Methods
-    // =========================================================================
-
 }

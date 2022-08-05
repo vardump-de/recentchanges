@@ -6,7 +6,7 @@
  * RecentchangesWidget Widget Body
  *
  * @author    rmdev
- * @copyright Copyright (c) 2018 rmdev
+ * @copyright Copyright (c) 2018-2022 rmdev
  * @link      https://github.com/rmdev
  * @package   Recentchanges
  * @since     1.0.0
@@ -24,12 +24,10 @@
                         <a href="{{ entry.getCpEditUrl() }}">{{ entry.title }}</a>
                         <span class="light">
                             {{ entry.dateUpdated|timestamp('short') }}
-                            {%- if CraftEdition == CraftPro -%}
-                                {% if className == "craft\\models\\EntryVersion" -%}
-                                    , {{ entry.getCreator().username }}
-                                {% elseif className == "craft\\elements\\Entry" -%}
+                            {% if entry.hasRevisions() and entry.getCurrentRevision() !== null %}
+                                    , {{ entry.getCurrentRevision().getCreator().username }}
+                             {% else %}
                                     , {{ entry.author.username }}
-                                {% endif %}
                             {% endif %}
                         </span>
                     </td>
