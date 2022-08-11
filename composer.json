@@ -37,6 +37,6 @@
         "hasCpSettings": false,
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/vardump-de/recentchanges/master/CHANGELOG.md",
-        "class": "Plugin"
+        "class": "vardump\\recentchanges\\Plugin"
     }
 }
