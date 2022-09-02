@@ -24,7 +24,7 @@
                         <a href="{{ entry.getCpEditUrl() }}">{{ entry.title }}</a>
                         <span class="light">
                             {{ entry.dateUpdated|timestamp('short') }}
-                            {% if entry.hasRevisions() and entry.getCurrentRevision() !== null %}
+                            {% if entry.hasRevisions() and entry.getCurrentRevision() %}
                                     , {{ entry.getCurrentRevision().getCreator().username }}
                              {% else %}
                                     , {{ entry.author.username }}
