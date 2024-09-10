@@ -5,7 +5,7 @@
  * A Widget showing recent changes to entries.
  *
  * @link      https://github.com/rmdev
- * @copyright Copyright (c) 2018-2022 rmdev
+ * @copyright Copyright (c) 2018-2024 rmdev
  */
 
 namespace vardump\recentchanges\widgets;

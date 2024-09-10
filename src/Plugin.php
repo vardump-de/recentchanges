@@ -5,7 +5,7 @@
  * A Widget showing recent changes to entries.
  *
  * @link      https://github.com/rmdev
- * @copyright Copyright (c) 2018-2022 rmdev
+ * @copyright Copyright (c) 2018-2024 rmdev
  */
 
 namespace vardump\recentchanges;
@@ -15,6 +15,7 @@ use vardump\recentchanges\widgets\RecentchangesWidget;
 use Craft;
 use craft\services\Dashboard;
 use craft\events\RegisterComponentTypesEvent;
+use craft\base\Plugin as BasePlugin;
 
 use yii\base\Event;
 
@@ -32,7 +33,7 @@ use yii\base\Event;
  * @package   Recentchanges
  * @since     1.0.0
  */
-class Plugin extends craft\base\Plugin
+class Plugin extends BasePlugin
 {
     // Static Properties
     // =========================================================================

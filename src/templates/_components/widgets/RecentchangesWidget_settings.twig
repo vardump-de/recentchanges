@@ -6,7 +6,7 @@
  * RecentchangesWidget Widget Settings
  *
  * @author    rmdev
- * @copyright Copyright (c) 2018-2022 rmdev
+ * @copyright Copyright (c) 2018-2024 rmdev
  * @link      https://github.com/rmdev
  * @package   Recentchanges
  * @since     1.0.0
@@ -20,7 +20,7 @@
     <div class="select">
         <select id="section" name="section">
             <option value="*">{{ "All"|t('app') }}</option>
-            {% for section in craft.app.sections.getAllSections() %}
+            {% for section in craft.app.entries().getAllSections() %}
                 {% if section.type != 'single' %}
                     <option value="{{ section.id }}"{% if section.id == widget.section %} selected{% endif %}>{{ section.name|t('site') }}</option>
                 {% endif %}
