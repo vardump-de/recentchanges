@@ -2,7 +2,7 @@
     "name": "vardump/recentchanges",
     "description": "A Widget showing the last updated entries.",
     "type": "craft-plugin",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "keywords": [
         "craft",
         "cms",

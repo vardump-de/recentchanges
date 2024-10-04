@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.0.1 - 2024-10-04
+### Fixed 
+ - choosing section in settings causes error [#4](https://github.com/vardump-de/recentchanges/issues/4)
+
 ## 3.0.0 - 2024-09-10
 ### Changed
 - Craft CMS 5.x Version
