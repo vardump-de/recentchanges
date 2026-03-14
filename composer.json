@@ -2,7 +2,7 @@
     "name": "vardump/recentchanges",
     "description": "A Widget showing the last updated entries.",
     "type": "craft-plugin",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "keywords": [
         "craft",
         "cms",
@@ -18,8 +18,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "rmdev",
-            "homepage": "https://github.com/rmdev"
+            "name": "vardump-de",
+            "homepage": "https://github.com/vardump-de"
         }
     ],
     "require": {

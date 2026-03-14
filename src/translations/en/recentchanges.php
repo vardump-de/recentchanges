@@ -4,8 +4,8 @@
  *
  * A Widget showing recent changes to entries.
  *
- * @link      https://github.com/rmdev
- * @copyright Copyright (c) 2018-2024 rmdev
+ * @link      https://github.com/vardump-de
+ * @copyright Copyright (c) 2018-2026 vardump-de
  */
 
 /**
@@ -16,7 +16,7 @@
  *
  * http://www.yiiframework.com/doc-2.0/guide-tutorial-i18n.html
  *
- * @author    rmdev
+ * @author    vardump-de
  * @package   Recentchanges
  * @since     1.0.0
  */
@@ -24,5 +24,6 @@ return [
     'recentchanges plugin loaded' => 'recentchanges plugin loaded',
     'RecentchangesWidget' => 'Recent Changes',
     'Recent Changes' => 'Recent Changes',
-    'Recent Changes | {section}' => 'Recent Changes | {section}'
+    'Recent Changes | {section}' => 'Recent Changes | {section}',
+    'no title defined' => 'No title defined',
 ];

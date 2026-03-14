@@ -5,9 +5,9 @@
  *
  * RecentchangesWidget Widget Body
  *
- * @author    rmdev
- * @copyright Copyright (c) 2018-2024 rmdev
- * @link      https://github.com/rmdev
+ * @author    vardump-de
+ * @copyright Copyright (c) 2018-2026 vardump-de
+ * @link      https://github.com/vardump-de
  * @package   Recentchanges
  * @since     1.0.0
  */
@@ -21,12 +21,12 @@
                 <tr>
                     <td>
                         <span class="status {{ entry.status }} "></span>
-                        <a href="{{ entry.getCpEditUrl() }}">{{ entry.title }}</a>
+                        <a href="{{ entry.getCpEditUrl() }}">{{ entry.title ?? "no title defined"|t('recentchanges') }}</a>
                         <span class="light">
                             {{ entry.dateUpdated|timestamp('short') }}
                             {% if entry.hasRevisions() and entry.getCurrentRevision() %}
                                     , {{ entry.getCurrentRevision().getCreator().username }}
-                             {% else %}
+                             {% elseif entry.author %}
                                     , {{ entry.author.username }}
                             {% endif %}
                         </span>
@@ -35,6 +35,6 @@
             {% endfor %}
         </table>
     {% else %}
-        <p>{{ "No entries exist yet."|t('app') }}</p>
+        <p>{{ "No entries exist yet."|t('recentchanges') }}</p>
     {% endif %}
 </div>

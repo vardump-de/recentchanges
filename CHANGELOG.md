@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.0.2 - 2026-03-14
+### Fixed
+ - show link for entries without a title
+ - do assume `author` field exists
+
 ## 3.0.1 - 2024-10-04
 ### Fixed 
  - choosing section in settings causes error [#4](https://github.com/vardump-de/recentchanges/issues/4)
