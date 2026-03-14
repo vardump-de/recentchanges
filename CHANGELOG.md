@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 3.0.2 - 2026-03-14
 ### Fixed
  - show link for entries without a title
- - do assume `author` field exists
+ - do not assume `author` field exists
 
 ## 3.0.1 - 2024-10-04
 ### Fixed 
